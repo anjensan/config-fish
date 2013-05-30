@@ -27,17 +27,17 @@ function fish_prompt --description 'Write out the prompt'
         printf 'vf:%s ' (basename "$VIRTUAL_ENV")
     end
 
-    set_color $fish_color_cwd
-    printf '%s' (prompt_pwd)
-    
     if __fish_git_in_working_tree
         if __fish_git_dirty
             set_color red
         else
             set_color blue
         end
-        printf " git:%s%s" (__fish_git_current_branch) (set_color normal)
+        printf "git:%s%s " (__fish_git_current_branch) (set_color normal)
     end
+
+    set_color $fish_color_cwd
+    printf '%s' (prompt_pwd)
 
     if test $last_status -eq 0
         set_color white -o

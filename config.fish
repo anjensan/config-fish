@@ -16,7 +16,7 @@ prepend_to_path "$HOME/bin"
 prepend_to_path "$HOME/.local/bin"
 
 set -g -x fish_greeting ''
-set -g -x EDITOR 'emacs -nw'
+set -g -x EDITOR 'emacsclient -q -t -a ""'
 
 function ..; cd ..; end
 function ...; cd ../..; end

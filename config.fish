@@ -12,8 +12,9 @@ function prepend_to_path -d "Prepend the given dir to PATH if it exists and is n
     end
 end
 
-prepend_to_path "$HOME/bin"
-prepend_to_path "$HOME/.local/bin"
+prepend_to_path $HOME/bin
+prepend_to_path $HOME/.local/bin
+prepend_to_path $HOME/.pyenv/bin
 
 set -g -x fish_greeting ''
 set -g -x EDITOR 'emacsclient -q -t -a ""'

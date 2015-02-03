@@ -17,7 +17,7 @@ prepend_to_path $HOME/.local/bin
 prepend_to_path $HOME/.pyenv/bin
 
 set -g -x fish_greeting ''
-set -g -x EDITOR 'vim'
+set -g -x EDITOR "emacsclient -a '' -nw"
 
 function ..; cd ..; end
 function ...; cd ../..; end

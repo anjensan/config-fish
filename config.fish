@@ -22,6 +22,10 @@ function ...; cd ../..; end
 function ....; cd ../../..; end
 function .....; cd ../../../..; end
 
+if test -e ~/.fishrc
+   . ~/.fishrc
+end
+
 . ~/.config/fish/virtualfish/virtual.fish
 
 true
